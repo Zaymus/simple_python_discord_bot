@@ -7,7 +7,9 @@ class Commands(commands.Cog):
 
     @commands.command()
     async def ping(self, ctx):
-        ping = round(self.bot.latency * 1000)
+        ping = round(self.bot.latency * 1000)#gets ping of the user from the bot and converts it to ms instead of seconds
+
+        #conditioning that changes colour of ping depending on how severe it is ((diff +, fix, diff -) (green = good, yellow = ok, red = bad))
         if(ping <= 80):
             await ctx.send(f':satellite:```diff\n PONG!\n+ {ping}ms```:satellite_orbital:')
         elif(ping <= 150):
