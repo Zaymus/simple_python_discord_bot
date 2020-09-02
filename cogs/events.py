@@ -7,6 +7,7 @@ class Events(commands.Cog):
 
     @commands.Cog.listener()
     async def on_ready(self):
+        await self.bot.change_presence(status=discord.Status.do_not_disturb, activity=discord.Game('the market'))
         #prints to console when the bot is ready to be used after initial startup
         print("py bot is online!")
 
