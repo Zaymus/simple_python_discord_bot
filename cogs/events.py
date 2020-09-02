@@ -7,6 +7,7 @@ class Events(commands.Cog):
 
     @commands.Cog.listener()
     async def on_ready(self):
+        #prints to console when the bot is ready to be used after initial startup
         print("py bot is online!")
 
 def setup(bot):
